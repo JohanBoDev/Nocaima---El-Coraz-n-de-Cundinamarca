@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("./assets/img/logo_nocaima.png");
+}
+
+/*fondo hero*/
+.fondo_hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fondo_hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+}
+
+.fondo_hero h1,
+.fondo_hero p,
+.fondo_hero a {
+  position: relative;
+  z-index: 2;
+}
+.fondo_hero h1 {
+  animation: fadeInUp 1s ease-out;
+}
+
+.fondo_hero p {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.fondo_hero a {
+  animation: fadeInUp 1.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*header y nav*/
+
+.scroll-offset {
+  padding-top: 81px; /* Igual a la altura de la barra de navegación fija */
+  margin-top: -81px; /* Negativo para compensar el padding */
+}
+
+
+header {
+    background-color: rgba(255, 255, 255, 0.525);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+header.scrolled {
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  background-color: rgba(0, 0, 0, 0.607); /* Fondo más oscuro al hacer scroll */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+
+header.scrolled .logo-container {
+  opacity: 0;
+display: none;  
+transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+header.scrolled .nav-link {
+  color: white;
+}
+
+header.scrolled .nav-link::after {
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.7em 1.5em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: white;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 1px;
+}
+
+.nav-link span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid currentColor; /* Usa el color actual */
+}
+
+.nav-link span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+.nav-link:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: currentColor; /* Usa el color actual */
+}
+
+.nav-link:hover {
+  color: var(--hover-color); /* Cambia el color al hover */
+}
+
+.nav-link:active span::before {
+  background: #2751cd;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
+.nav-link {
+  --hover-color: royalblue;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Colores personalizados en el hover */
+.nav-link[data-hover-color="#007A00"]:hover {
+  color: #007a00;
+}
+
+.nav-link[data-hover-color="#1b6eae"]:hover {
+  color: #1b6eae;
+}
+
+.nav-link[data-hover-color="#DC2627"]:hover {
+  color: #dc2627;
+}
+
+.nav-link[data-hover-color="#FB923C"]:hover {
+  color: #fb923c;
+}
+
+.nav-link[data-hover-color="#FBBF24"]:hover {
+  color: #fbbf24;
+}
+
+/*boton del menu en movil*/
+/* Botón de menú */
+#menu-toggle {
+  display: none;
+}
+
+
+
+@media (max-width: 1350px) {
+  header {
+      justify-content: space-between;
+  }
+
+  nav {
+      display: none;
+  }
+
+  #menu-toggle {
+      display: flex;
+  }
+
+
+
+  #mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      z-index: 1000;
+  }
+.menu_oculto {
+  display: none;
+}
+
+.menu_mostrado {
+  display: flex;
+  flex-direction: column; 
+}
+  
+}
+
+
+/*boton cta*/
+.btn-cta {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 18px;
+  border-radius: 40em;
+  width: 10em; /* Ajustado para acomodar el texto */
+  height: 3em;
+  z-index: 1;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  line-height: 3em;
+  background-color: transparent;
+}
+
+/* Estilos para el texto del botón */
+.btn-cta .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40em;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.473),
+    rgba(150, 150, 150, 0.25)
+  );
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Estilos para las burbujas (blobs) */
+.btn-cta .blob {
+  position: absolute;
+  z-index: -1;
+  border-radius: 5em;
+  width: 5em;
+  height: 3em;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn-cta .blob:nth-child(2) {
+  left: 0em;
+  top: 0;
+  background: #007a00; /* Verde */
+}
+
+.btn-cta .blob:nth-child(3) {
+  left: 1.8em;
+  top: 0;
+  z-index: -1;
+  background: #dc2627; /* Rojo */
+}
+
+.btn-cta .blob:nth-child(4) {
+  left: 4em;
+  top: -1em;
+  background: #1b6eae; /* Azul */
+}
+
+.btn-cta .blob:nth-child(5) {
+  left: 4.3em;
+  top: 1.6em;
+  background: #fb923c; /* Naranja */
+}
+
+/* Efectos de hover */
+.btn-cta:hover .blob:nth-child(2) {
+  background: #d9cc18; /* Naranja */
+}
+
+.btn-cta:hover .blob:nth-child(3) {
+  background: #1b6eae; /* Azul */
+}
+
+.btn-cta:hover .blob:nth-child(4) {
+  background: #dc2627; /* Rojo */
+}
+
+.btn-cta:hover .blob:nth-child(5) {
+  background: #007a00; /* Verde */
+}
+
+.btn-cta:hover .blob {
+  transform: scale(1.3);
+}
+
+/* Efecto de click */
+.btn-cta:active {
+  border: 2px solid white;
+}
+
+/*estilos de historia*/
+.history {
+  background-color: #558d6f; /* Verde oscuro, combina con la temática */
+  color: #f0f4f8; /* Texto en color claro */
+}
+
+.history img {
+  margin-left: 4vw;
+  width: 90%;
+  height: auto;
+  border-radius: 1.5rem;
+  border: 8px #d6cd1a solid; /* Borde gris claro */
+  outline: #397f45 solid 0.5rem; /* Verde claro */
+}
+
+.history h2 {
+  font-size: 2.5rem; /* Tamaño de fuente para el título */
+  margin-bottom: 1rem;
+  font-weight: 700; 
+  text-align: center;
+}
+
+.history p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  background-color: #2d3748; /* Fondo gris oscuro para el texto */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  color: #e2e8f0; /* Texto en color claro */
+}
+
+.history p span {
+  background-color: #e79b16; /* Fondo amarillo claro para resaltar palabras */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.history a {
+  color: #ffffff; /* Verde claro para el enlace */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.history a:hover {
+  color: #ffffff; /* Verde más oscuro en hover */
+  text-decoration: underline;
+}
+
+/* historia, boton de leer mas*/
+.read-more-btn {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #2d3748; /* Verde oscuro, representando la naturaleza de Nocaima */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff; /* Blanco cálido */
+  gap: 10px;
+  font-weight: bold;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.read-more-btn .icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.read-more-btn:hover {
+  border-color: #f6ad55; /* Naranja claro para un suave contraste */
+}
+
+.read-more-btn:hover .icon {
+  transform: translate(4px); /* Desplazamiento del icono al pasar el mouse */
+}
+
+.read-more-btn:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.read-more-btn::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
+/*historia linea del tiempo*/
+.timeline-section {
+  position: relative;
+  padding: 50px 0;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  color: #fff;
+  z-index: 2;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #558d6f;
+  top: -50px;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%); /* Centra la línea con mayor precisión */
+}
+
+
+.timeline-item {
+  background-size: cover;
+  padding: 20px 20px;
+  position: relative;
+  background-color: #333;
+  border-radius: 6px;
+  width: 50%;
+  margin: 10px 0;
+  z-index: 2;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #d2d20a;
+  border: 4px solid #397F45;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: -3px;
+}
+
+.timeline-item.right {
+  left: 49%;
+  margin-left: 3px;
+}
+
+.timeline-item.right::before {
+  left: -16px;
+}
+
+.timeline-item h3 {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .timeline-item h3{
+    font-size: 14px;
+    }
+  .timeline-item p{
+    font-size: 11px;
+  }
+  
+}
+
+/*turismo*/
+
+#turismo {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #558D6F; /* Fondo gris claro */
+  color: #2d3748; /* Texto gris oscuro */
+}
+
+
+.turismo-item {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.turismo-item img {
+  height: 12rem; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+.turismo-item h3 {
+  font-size: 1.5rem; /* Tamaño del título */
+  margin-bottom: 0.5rem; /* Espacio inferior */
+}
+
+.turismo-item p {
+  color: #4a5568; /* Texto gris más oscuro */
+}
+
+/*mapa nocaima*/
+
+
+
+.bg-nocaima-overlay {
+  position: relative;
+}
+
+.bg-nocaima-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.193); /* Oscurecer la imagen */
+  z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+.como-llegar {
+  margin-top: 30px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #eda406; /* Fondo verde oscuro */
+  color: #f0f4f8; /* Texto en color claro */
+}
+
+.como-llegar:hover {
+font-weight: bold;
+}
+
+
+/*footer*/
+
+.iconos{
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 100%;
+
+}
+.iconos:hover{
+  background: #f0f4f8;
+}
+
+.fondo-footer{
+  background-color: #2d3748;
+}

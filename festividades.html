@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festividades de Nocaima</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/fondo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      h1,
+      h2 {
+        font-family: "Helvetica", sans-serif;
+      }
+
+      /* Fondo de la cabecera */
+      .wave-background {
+        background-image: url("assets/img/wave_nocaima_cultura_desktop.svg");
+        background-size: cover;
+        background-position: bottom;
+      }
+
+      /* Contenedor principal */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Estilos generales para las festividades */
+      .festividad {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        background-color: #ffffff;
+        box-shadow: 10px 13px 50px rgba(0, 0, 0, 1);        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+
+      .festividad img {
+        width: 50%;
+        object-fit: cover;
+      }
+
+      .festividad-content {
+        padding: 30px;
+        width: 50%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      /* Colores y sombras de los títulos */
+      .festividad h2 {
+        color: #4caf50;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        margin-bottom: 10px;
+      }
+
+      /* Texto general de las descripciones */
+      .festividad p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .festividad h2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        margin-bottom: 10px;
+      }
+
+      /* Colores únicos para cada h2 */
+      .festividad:nth-child(1) h2 {
+        color: #ff5d22e7; /* Naranja fuerte */
+      }
+      .festividad:nth-child(2) h2 {
+        color: #ff9800; /* Naranja */
+      }
+        .festividad:nth-child(3) h2 {
+            color: #2196f3; /* Azul */
+        }
+
+      .festividad:nth-child(4) h2 {
+        color: #4caf50; /* Verde */
+      }
+      .festividad:nth-child(5) h2 {
+        color: #009688; /* Verde azulado */
+      }
+      .festividad:nth-child(6) h2 {
+        color: #673ab7; /* Púrpura */
+      }
+
+      /* Texto destacado */
+      .highlight {
+        background-color: #fff176;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.875rem; /* text-sm */
+      }
+
+      .highlight-orange {
+        background-color: #ff6b26; /* Fondo naranja */
+        color: #ffffff;
+      }
+
+      .highlight-green {
+        background-color: #66bb6a; /* Fondo verde */
+        color: #ffffff;
+      }
+
+      .highlight-red {
+        background-color: #ef5350; /* Fondo rojo */
+        color: #ffffff;
+      }
+
+      .highlight-blue {
+        background-color: #42a5f5; /* Fondo azul */
+        color: #ffffff;
+      }
+
+      /* Responsivo: estilos para dispositivos móviles */
+      @media (max-width: 1024px) {
+        .festividad img,
+        .festividad-content {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .festividad {
+          flex-direction: column;
+        }
+
+        .wave-background {
+          background-image: url("assets/img/wave_nocaima_cultura.svg");
+          background-size: cover;
+          background-position: bottom;
+        }
+
+        .festividad-content {
+          padding: 20px;
+        }
+
+        .festividad h2 {
+          font-size: 1.5rem;
+        }
+
+        .festividad p {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .festividad h2 {
+          font-size: 1rem;
+        }
+
+        .festividad p {
+          font-size: 14px;
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .festividad-content {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-image: url('./assets/img/nocaima_galeria2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow-x: hidden;"
+  >
+    <header
+      class="flex justify-between items-center py-3 shadow-lg bg-black bg-opacity-70"
+    >
+      <div class="flex items-center ml-5 logo-container">
+        <img
+          src="assets/img/logo_noca.png"
+          alt="Nocaima Logo"
+          class="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+        />
+        <div class="hidden md:flex flex-col justify-center ml-3">
+          <h2 class="text-white font-bold text-xl">
+            <b class="text-green-700">N</b><b class="text-green-500">o</b
+            ><b class="text-[#1B6EAE]">c</b><b class="text-red-600">a</b
+            ><b class="text-blue-400">i</b><b class="text-orange-400">m</b
+            ><b class="text-yellow-200">a</b>
+          </h2>
+          <h2 class="text-white font-bold text-lg">
+            <b class="text-yellow-400">Paraiso</b>
+            <b class="text-green-600">Dulce</b>
+          </h2>
+        </div>
+      </div>
+    </header>
+    <!-- seccion hero-->
+    <section
+      class="fondo_hero flex flex-col justify-center items-center text-center"
+    >
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white"
+      >
+        Festividades de
+        <span class="nocaima-colored">
+          <b class="text-green-700">N</b>
+          <b class="text-green-500">o</b>
+          <b class="text-[#1B6EAE]">c</b>
+          <b class="text-red-600">a</b>
+          <b class="text-blue-400">i</b>
+          <b class="text-orange-400">m</b>
+          <b class="text-yellow-400">a</b>
+        </span>
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8">
+        Descubre las tradiciones que hacen de
+        <span
+          style="background-color: orange"
+          class="p-1 rounded text-white font-bold"
+          >Nocaima</span
+        >
+        un lugar único.
+      </p>
+
+      <a href="index.html" class="btn-cta">
+        <span class="text">Volver</span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+      </a>
+    </section>
+    <section id="festividades" class="py-16 px-5 text-gray-800" style="background-image: url('assets/img/wave_nocaima_culturas.svg'); background-repeat: no-repeat; background-position: bottom; background-size: cover;">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/festival-panche.jpg" alt="Festival Vallenato Panche de Acordeones" class="rounded-lg shadow-lg border-8 border-green-700"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12" style="background-image: url('assets/img/acordeonista\ \(1\).png'); background-position: center; background-repeat: no-repeat; ">
+          <h2 class="text-4xl font-bold mb-4 text-white" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">Festival Vallenato Panche de Acordeones</h2>
+          <p class="mb-6 text-white" style=" text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7);">
+            Este evento emblemático celebra la <span class="bg-white p-1 text-[#FF5722] text-sm font-bold rounded">música vallenata</span>, reuniendo a los mejores acordeonistas de la región. Es una de las festividades más importantes de Nocaima, donde la música y la cultura se unen en un solo lugar.
+          </p>
+        </div>
+      </div>
+      
+      <div class="container mx-auto flex flex-col md:flex-row items-center mt-16">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/reinado_panela.jpg" alt="Reinado Departamental de la Panela" class="rounded-lg shadow-lg border-8 border-green-700"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12" style="background-image: url('assets/img/reina.png'); background-position: center; background-repeat: no-repeat; ">
+          <h2 class="text-4xl font-bold mb-4 text-white" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">Reinado Departamental de la Panela</h2>
+          <p class="mb-6 text-white" style=" text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7);">
+            Celebración que destaca la importancia de la <span class="bg-white text-green-700 font-bold text-sm p-1 rounded" >panela</span> en la región, acompañado por la elección de la reina, quien representa la tradición y cultura de Nocaima.
+          </p>
+        </div>
+      </div>
+      
+      <div class="container mx-auto flex flex-col md:flex-row items-center mt-16">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/reinado_municipal.webp" alt="Reinado Municipal de la Panela" class="rounded-lg shadow-lg border-8 border-green-700"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12" style="background-image: url('assets/img/pasadizo\ \(1\).png'); background-position: center; background-repeat: no-repeat; ">
+          <h2 class="text-4xl font-bold mb-4 text-white" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">Reinado Municipal de la Panela</h2>
+          <p class="mb-6 text-white" style=" text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7);">
+            Una festividad local que honra la tradición de la <span class="bg-white text-green-700 font-bold text-sm p-1 rounded">panela</span>, con un reinado que celebra la cultura y la tradición de Nocaima.
+          </p>
+        </div>
+      </div>
+      
+      <div class="container mx-auto flex flex-col md:flex-row items-center mt-16">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/feria-campesina.webp" alt="Día del Campesino" class="rounded-lg shadow-lg border-8 border-green-700"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12 md:flex md:flex-col md:gap-y-12"  style="background-image: url('assets/img/campesino.png'); background-position: center; background-repeat: no-repeat; ">
+          <h2 class="text-4xl font-bold mb-4 text-white" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">Día del Campesino</h2>
+          <p class="mb-6 text-white" style="text-shadow: 3px 0px 5px rgb(0 0 0);
+        
+        ">
+            Un día dedicado a honrar a los <span class="bg-green-800 rounded p-1 text-sm text-white font-bold">campesinos</span> de Nocaima, resaltando su arduo trabajo y su papel vital en la comunidad.
+          </p>
+        </div>
+      </div>
+      
+      <div class="container mx-auto flex flex-col md:flex-row items-center mt-16">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/festival_caña.webp" alt="Festival de la Caña Panelera" class="rounded-lg shadow-lg border-8 border-green-700"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12 md:flex md:flex-col md:gap-y-12" style="background-image: url('assets/img/cana-de-azucar.png'); background-position: center; background-repeat: no-repeat; ">
+          <h2 class="text-4xl font-bold mb-4 text-white " style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">Festival de la Caña Panelera</h2>
+          <p class="mb-6 text-white" style=" text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7);">
+            Este festival celebra la producción de <span class="bg-white text-sm text-[#E69A16] font-bold p-1 rounded">caña de azúcar</span> y la elaboración de <span class="bg-white text-sm text-[#E69A16] font-bold p-1 rounded">panela</span>, productos insignia de Nocaima.
+          </p>
+        </div>
+      </div>
+      
+      <div class="container mx-auto flex flex-col md:flex-row items-center mt-16">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="assets/img/teatro.jpg" alt="Festival Departamental de Teatro Estudiantil" class="rounded-lg shadow-lg border-8 border-green-700"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12 " style="background-image: url('assets/img/mascaras-de-teatro.png'); background-position: center; background-repeat: no-repeat; background-size: auto;">
+          <h2 class="text-4xl font-bold mb-4 text-white" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)">Festival Departamental de Teatro Estudiantil</h2>
+          <p class="mb-6 text-white" style=" text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7);">
+            Un espacio donde estudiantes de toda la región demuestran su talento en las <span class="bg-white font-bold p-1  rounded text-[#E79B16]">artes escénicas</span>, promoviendo la cultura y el arte en Nocaima.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+    <footer class="text-white py-10 fondo-footer" style="background-image: url('assets/img/wave\ \(1\).svg'); background-repeat: no-repeat; background-position: bottom;" id="footer">
+      <div class="container mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logotipo y Branding -->
+          <div class="flex flex-col items-center">
+              <img src="assets/img/logo_footer.png" alt="Logo Nocaima" class="mr-3">
+              <p class="text-[12px] text-black">El corazón de <span class="font-bold text-white bg-orange-400 p-1 rounded">Cundinamarca</span></p>
+              <h2 class="text-white font-bold text-lg text-center mt-3">
+                <b class="text-yellow-300 bg-[#00122F] p-1 rounded font-bold">Paraiso</b>
+                <b class="text-blue-400  bg-[#00122F] p-1 rounded font-bold">Dulce</b><br>
+                     Y <br><span class="text-red-500 bg-[#00122F] p-1 rounded font-bold">ecologico</span>
+              </h2>
+         
+          </div>
+  
+          <!-- Mapa del Sitio -->
+          <div class="hidden md:block">
+              <h3 class="text-xl font-semibold mb-4 text-white">Mapa del Sitio</h3>
+              <ul>
+                  <li><a href="#cultura" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Cultura</a></li>
+                  <li><a href="#turismo" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Turismo</a></li>
+                  <li><a href="#economia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Economía</a></li>
+                  <li><a href="#historia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Historia</a></li>
+                  <li><a href="#gastronomia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Gastronomía</a></li>
+                  <li><a href="festividades.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Eventos y Festividades</a></li>
+              </ul>
+          </div>
+  
+          <!-- Información de Contacto -->
+          <div class="hidden md:block">
+              <h3 class="text-xl font-semibold mb-4 text-white">Contacto</h3>
+              <p class="text-gray-300"><strong>Dirección:</strong> Calle Principal, Nocaima, Cundinamarca</p>
+              <p class="text-gray-300"><strong>Correo:</strong> <a href="mailto:info@nocaima.com" class="hover:text-yellow-400 transition-colors duration-300">info@nocaima.com</a></p>
+              <p class="text-gray-300"><strong>Teléfono:</strong> +57 123 456 7890</p>
+          </div>
+  
+          <!-- Redes Sociales -->
+          <div>
+              <h3 class="text-xl font-semibold mb-4 text-white">Síguenos</h3>
+              <div class="flex space-x-4">
+                  <a href="https://www.facebook.com/AlcaldiaDeNocaima" target="_blank" class="iconos text-gray-300 hover:text-blue-500 transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://x.com/alcaldianocaima" target="_blank" class="iconos text-gray-300 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/alcaldiadenocaima/" target="_blank" class="iconos text-gray-300 hover:text-pink-500 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Créditos, Avisos Legales, y Derechos de Autor -->
+      <div class="mt-10 text-center border-t border-gray-700 pt-5">
+  
+          <p class="text-white text-sm mt-2">
+          </p>
+          <p class="text-white text-sm mt-2">&copy; 2024 Nocaima.</p>
+          <p class="text-white text-sm">Desarrollado por <span class="font-bold transition-colors duration-300"><a href="https://github.com/JohanBoDev" target="_blank">Johan Bohorquez</a></span>.</p>
+      </div>
+  </footer>
+  
+  </body>
+</html>

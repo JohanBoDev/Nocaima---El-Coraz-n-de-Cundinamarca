@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </head>
+  <body
+    style="
+      background-image: url('./assets/img/hero_nocaima.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow-x: hidden;
+    "
+  >
+    <!-- header *  nav -->
+
+    <header
+      class="flex justify-between items-center py-3 shadow-lg bg-black bg-opacity-70"
+    >
+      <div class="flex items-center ml-5 logo-container">
+        <img
+          src="assets/img/logo_noca.png"
+          alt="Nocaima Logo"
+          class="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+        />
+        <div class="hidden md:flex flex-col justify-center ml-3">
+          <h2 class="text-white font-bold text-xl">
+            <b class="text-green-700">N</b><b class="text-green-500">o</b
+            ><b class="text-[#1B6EAE]">c</b><b class="text-red-600">a</b
+            ><b class="text-blue-400">i</b><b class="text-orange-400">m</b
+            ><b class="text-yellow-200">a</b>
+          </h2>
+          <h2 class="text-white font-bold text-lg">
+            <b class="text-yellow-400">Paraiso</b>
+            <b class="text-green-600">Dulce</b>
+          </h2>
+        </div>
+      </div>
+      <nav class="hidden md:flex">
+        <ul class="flex gap-x-14 mr-7">
+          <li>
+            <a
+              href="#historia"
+              class="nav-link font-bold"
+              data-hover-color="#007A00"
+            >
+              <img
+                src="assets/img/historia.png"
+                class="inline-block mr-2"
+              />Historia
+            </a>
+          </li>
+          <li>
+            <a href="#turismo" class="nav-link font-bold" data-hover-color="#DC2627">
+              <img
+                src="assets/img/turismo.png"
+                class="inline-block mr-2"
+              />Turismo
+            </a>
+          </li>
+          <li>
+            <a href="#economia" class="nav-link font-bold" data-hover-color="#1b6eae">
+              <img
+                src="assets/img/economia.png"
+                class="inline-block mr-2"
+              />Economía
+            </a>
+          </li>
+          <li>
+            <a href="#cultura" class="nav-link font-bold" data-hover-color="#FB923C">
+              <img
+                src="assets/img/cultura.png"
+                class="inline-block mr-2"
+              />Cultura
+            </a>
+          </li>
+          <li>
+            <a href="#footer" class="nav-link font-bold" data-hover-color="#FBBF24">
+              <img
+                src="assets/img/contacto.png"
+                class="inline-block mr-2"
+              />Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="menu-toggle" class="block md:hidden focus:outline-none mr-3">
+        <svg
+          class="w-6 h-6 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+      <nav id="mobile-menu" class="menu_oculto md:hidden">
+        <ul class="flex flex-col gap-y-4 p-4">
+          <li>
+            <a
+              href="#historia"
+              class="nav-link font-bold"
+              data-hover-color="#007A00"
+            >
+              Historia
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link font-bold" data-hover-color="#DC2627">
+              Turismo
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link font-bold" data-hover-color="#1b6eae">
+              Economía
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link font-bold" data-hover-color="#FB923C">
+              Cultura
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link font-bold" data-hover-color="#FBBF24">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- seccion hero-->
+    <section
+      class="fondo_hero flex flex-col justify-center items-center text-center"
+    >
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white"
+      >
+        Bienvenido a
+        <span class="nocaima-colored">
+          <b class="text-green-700">N</b>
+          <b class="text-green-500">o</b>
+          <b class="text-[#1B6EAE]">c</b>
+          <b class="text-red-600">a</b>
+          <b class="text-blue-400">i</b>
+          <b class="text-orange-400">m</b>
+          <b class="text-yellow-400">a</b>
+        </span>
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8">
+        El Paraíso Dulce de
+        <span class="colombia-colored">
+          <b class="text-yellow-500">C</b>
+          <b class="text-yellow-500">o</b>
+          <b class="text-yellow-500">l</b>
+          <b class="text-blue-500">o</b>
+          <b class="text-blue-500">m</b>
+          <b class="text-red-500">b</b>
+          <b class="text-red-500">i</b>
+          <b class="text-red-500">a</b>
+        </span>
+      </p>
+
+      <a href="#cultura" class="btn-cta">
+        <span class="text">Descubre Más</span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+      </a>
+    </section>
+    <!-- seccion historia-->
+    <section
+      id="historia"
+      class="history py-16 px-5 bg-[#558d6f] text-gray-800 "
+      style="
+        background-image: url('assets/img/wave\ \(1\).svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+      "
+    >
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="assets/img/iglesia_nocaima.jpg"
+            alt="Historia de Nocaima"
+            class="rounded-lg shadow-lg border-8 border-green-700"
+          />
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-4xl font-bold mb-4 text-yellow-300">
+            Nuestra Historia
+          </h2>
+          <p class="mb-6">
+            <span class="bg-yellow-100 p-1 rounded">Nocaima</span>, fundada en
+            1605, es uno de los municipios más antiguos de Cundinamarca.
+            Conocida como el
+            <span class="bg-yellow-200 p-1 rounded">"Paraiso Dulce"</span> por
+            su producción de panela, Nocaima ha sido testigo de siglos de
+            tradición y cultura que aún perduran hoy en día.
+          </p>
+          <p class="mb-6">
+            Durante la colonia, <span>Nocaima</span> fue un punto estratégico
+            para el <span>comercio</span> y desarrollo de la región, y hoy en
+            día, sus calles empedradas y casas coloniales son un reflejo de su
+            rica historia. Los visitantes pueden disfrutar de un viaje al pasado
+            mientras exploran sus paisajes y costumbres.
+          </p>
+          <a
+            href="https://es.wikipedia.org/wiki/Nocaima"
+            target="_blank"
+            class="read-more-btn"
+          >
+            Leer más
+            <svg
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              class="icon text-[#E79B16]"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- seccion linea de tiempo-->
+    <section
+      class="timeline-section"
+      style="
+        background-image: url('./assets/img/nocaima_lineaTiempo.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.096);
+      "
+    >
+      <article class="timeline">
+        <h2
+          style="text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8)"
+          class="text-center z-30 shadow lg:text-2xl xl:text-3xl md:text-base text-[11px] font-bold text-white absolute lg:top-1 xl:top-3 xl:-right-5 max-xl:xl:-right-20 max-sm:top-1 max-sm:left-1 max-lg:top-2 max-lg:left-4"
+        >
+          Línea del Tiempo de <b class="text-green-700">N</b
+          ><b class="text-green-500">o</b><b class="text-[#1B6EAE]">c</b
+          ><b class="text-red-600">a</b><b class="text-blue-400">i</b
+          ><b class="text-orange-400">m</b><b class="text-yellow-400">a</b>
+        </h2>
+        <p
+          class="text-lg text-white absolute top-16 -right-8 max-xl:hidden block"
+          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)"
+        >
+          Un recorrido por la historia y evolución de
+          <span class="bg-[#E79B16] font-bold p-1 rounded text-white"
+            >Nocaima</span
+          ><br />
+          a través de los años
+        </p>
+        <div
+          class="timeline-item left"
+          style="
+            background-color: #004d00;
+            color: #fff;
+            background-image: url('assets/img/svg-bg-1.svg');
+            background-repeat: no-repeat;
+            object-fit: cover;
+          "
+        >
+          <h3>1605 - Fundación</h3>
+          <p>
+            Nocaima es fundada, convirtiéndose en uno de los municipios más
+            antiguos de Cundinamarca.
+          </p>
+        </div>
+        <div
+          class="timeline-item right"
+          style="
+            background-color: #005000;
+            color: #fff;
+            background-image: url('assets/img/svg-bg-2.svg');
+            background-repeat: no-repeat;
+          "
+        >
+          <h3>Época Colonial</h3>
+          <p>
+            Nocaima se convierte en un punto estratégico para el comercio y el
+            desarrollo de la región.
+          </p>
+        </div>
+        <div
+          class="timeline-item left"
+          style="
+            background-color: #007a00;
+            color: #fff;
+            background-image: url('assets/img/svg-bg-3.svg');
+            background-repeat: no-repeat;
+            object-fit: cover;
+          "
+        >
+          <h3>Siglo XX - Producción de Panela</h3>
+          <p>
+            Nocaima se consolida como "El Paraíso Dulce" debido a su producción
+            de panela.
+          </p>
+        </div>
+        <div
+          class="timeline-item right"
+          style="
+            background-color: #008000;
+            color: #fff;
+            background-image: url('assets/img/svg-bg-4.svg');
+            background-repeat: no-repeat;
+            object-fit: cover;
+          "
+        >
+          <h3>Actualidad</h3>
+          <p>
+            Conservación de su rica historia y cultura, atrayendo visitantes
+            interesados en sus tradiciones y paisajes.
+          </p>
+        </div>
+      </article>
+    </section>
+    <!-- seccion de turismo-->
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 turismo-section "
+      id="turismo"
+    >
+      <!-- titulo -->
+      <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+          Explora <b class="text-green-700">N</b><b class="text-green-500">o</b
+          ><b class="text-[#1B6EAE]">c</b><b class="text-red-600">a</b
+          ><b class="text-blue-400">i</b><b class="text-orange-400">m</b
+          ><b class="text-yellow-400">a</b>: Donde la Naturaleza y la Historia
+          se Encuentran
+        </h2>
+        <p class="text-lg md:text-xl lg:text-2xl font-light text-white">
+          Sumérgete en la riqueza natural y cultural de
+          <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>, un
+          destino que combina
+          <span class="bg-[#fb923c] font-bold p-1 rounded">aventura</span>,
+          tranquilidad, y tradición en el corazón de
+          <span class="bg-[#2d3748] font-bold p-1 rounded"
+            ><b class="text-yellow-500">C</b><b class="text-yellow-500">o</b
+            ><b class="text-yellow-500">l</b><b class="text-blue-500">o</b
+            ><b class="text-blue-500">m</b><b class="text-red-500">b</b
+            ><b class="text-red-500">i</b><b class="text-red-500">a</b></span
+          >.
+        </p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/pioneros.jpg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Pioneros Nocaima</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Destino enfocado en el turismo de aventura, perfecto para
+            actividades al aire libre.
+          </p>
+
+          <!-- Ubicación -->
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/9ewkEgNPY2CKFLjd8"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/nocaima_galeria2.jpg"
+          alt="Iglesia Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Iglesia de Nocaima</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Monumento histórico y religioso, con una arquitectura colonial
+            única.
+          </p>
+
+          <!-- Ubicación -->
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/dksXRT1zr8DW7H2r7"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/rayito-sol.jpg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Balneario Rayito De Sol</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Un lugar ideal para disfrutar de un día de sol y agua con la familia
+          </p>
+
+          <!-- Ubicación -->
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/a5k7etC2uDvuU9xy9"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/casa-cultura.webp"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Casa de la cultura</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Un centro cultural donde se preservan y promueven las tradiciones y
+            el arte de Nocaima.
+          </p>
+
+          <!-- Ubicación -->
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/BNNer7zgreTnC4b99"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/rancho-pacho.jpg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Rancho Pacho</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Rancho Pacho es un destino ideal para disfrutar de la naturaleza y
+            la tranquilidad, ofreciendo diversas actividades al aire libre y un
+            ambiente rural auténtico.
+            <!-- Ubicación -->
+          </p>
+
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/dDjUiDFScgw7fdre7"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/criadero-trinidad.jpg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Criadero Equino La Trinidad</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Un criadero especializado en caballos de alta calidad, perfecto para
+            los amantes de los equinos.
+            <!-- Ubicación -->
+          </p>
+
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/pbfwCpjoG86vV9h48"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/san-cayetano.jpg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Balneario de San Cayetano</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            El Balneario de San Cayetano es un lugar perfecto para relajarse y
+            disfrutar de un día de descanso con la familia, rodeado de
+            naturaleza y piscinas refrescantes.
+            <!-- Ubicación -->
+          </p>
+
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/hkxqnFcBzn72796Z6"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/casa-encanto.jpeg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Casa Encanto Colombia</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Casa Encanto Colombia es un hermoso alojamiento en Nocaima que
+            ofrece una experiencia única y acogedora, con un entorno encantador
+            y servicios de alta calidad.
+          </p>
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/XPPS3QPWnsW4yfar8"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/villa-celeny.webp"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Villa Celeny</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Villa Celeny es un refugio tranquilo ubicado en Nocaima, ideal para
+            disfrutar de la paz y la naturaleza, con vistas espectaculares y
+            cómodas instalaciones.
+          </p>
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://www.google.com/travel/hotels/s/5SEFTkHbcEuzjeBM9"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/quinta-real.jpeg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Hotel Quinta Real</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Un hotel con encanto en Nocaima, que ofrece cómodas habitaciones y
+            un ambiente relajante, perfecto para una escapada de la rutina
+            diaria.
+          </p>
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/yxdWR3uiGzmSE6DH7"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/sacharum.jpeg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Saccharum Villas de Lujo</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Saccharum Villas de Lujo es un conjunto de villas exclusivas en
+            Nocaima, diseñadas para ofrecer una experiencia de lujo en medio de
+            la naturaleza, con todas las comodidades modernas y un servicio
+            personalizado.
+          </p>
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/j58V3T9BfDCmih9w6"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Imagen -->
+        <img
+          class="w-full h-48 object-cover"
+          src="assets/img/laderas.jpg"
+          alt="Pioneross Nocaima"
+        />
+
+        <!-- Contenido de la Card -->
+        <div class="p-4">
+          <!-- Título -->
+          <h3 class="text-xl font-bold mb-2">Laderas de San Felipe</h3>
+
+          <!-- Descripción -->
+          <p class="text-gray-700 mb-4">
+            Un hermoso paraje natural en Nocaima, conocido por sus paisajes
+            exuberantes y oportunidades para caminatas y exploración.
+          </p>
+          <div class="flex items-center text-gray-600 mb-4">
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 20s-7.5-9.33-7.5-13.33A7.5 7.5 0 0110 0a7.5 7.5 0 017.5 7.5C17.5 10.67 10 20 10 20zm0-13.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
+              />
+            </svg>
+            <span class="inline-block">
+              <span class="bg-[#fb923c] font-bold p-1 rounded">Nocaima</span>,
+              <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
+                >Cundinamarca</span
+              ></span
+            >
+          </div>
+          <!-- Botón de "Cómo llegar" -->
+          <a
+            href="https://maps.app.goo.gl/QYrE6fSRQ3YnzeRV7"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- seccion de economia-->
+    <section
+      class="economia-section py-16 px-8 "
+      style="
+        background-image: url('assets/img/wave_background.svg');
+        min-height: 100vh;
+      "
+      id="economia"
+    >
+      <!-- Title -->
+      <div class="text-center mb-12">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-white mb-4"
+          style="text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8)"
+        >
+          Economía de <span class="text-green-700">N</span
+          ><span class="text-green-500">o</span
+          ><span class="text-[#1B6EAE]">c</span
+          ><span class="text-red-600">a</span
+          ><span class="text-blue-400">i</span
+          ><span class="text-orange-400">m</span
+          ><span class="text-yellow-400">a</span>
+        </h2>
+        <p
+          class="text-lg md:text-xl text-[#e0e0e0]"
+          style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)"
+        >
+          Explorando las riquezas y actividades económicas que dan vida a
+          nuestro
+          <span class="font-bold p-1 rounded" style="background: #001537"
+            >municipio</span
+          >.
+        </p>
+      </div>
+      <!-- Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+        <!-- Main Economic Activity -->
+        <div class="bg-white shadow-2xl rounded-lg overflow-hidden">
+          <img
+            class="w-full h-64 object-cover transform transition-transform hover:scale-105"
+            src="assets/img/caña.webp"
+            alt="Caña de Azúcar"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-green-700 pb-3">
+              Cultivo de Caña de Azúcar y Elaboración de Panela
+            </h3>
+            <hr />
+            <p class="text-gray-800 mt-4">
+              La principal actividad económica en Nocaima es el cultivo de caña
+              de azúcar y la elaboración de
+              <span
+                class="rounded p-1 font-bold text-white"
+                style="
+                  background-color: rgba(0, 128, 0, 0.803);
+                  font-size: 16px;
+                "
+                >panela</span
+              >, un proceso
+              <span
+                class="rounded p-1 font-bold text-white"
+                style="
+                  background-color: rgba(0, 128, 0, 0.803);
+                  font-size: 16px;
+                "
+                >artesanal</span
+              >
+              realizado en
+              <span
+                class="rounded p-1 font-bold text-white"
+                style="
+                  background-color: rgba(0, 128, 0, 0.803);
+                  font-size: 16px;
+                "
+                >enramadas</span
+              >
+              a lo largo del municipio. La comercialización de la panela se
+              realiza principalmente los fines de semana, siendo en gran parte
+              destinada a la
+              <span
+                class="rounded p-1 font-bold text-white"
+                style="
+                  background-color: rgba(0, 128, 0, 0.803);
+                  font-size: 16px;
+                "
+                >capital</span
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Alternative Crops -->
+        <div class="bg-white shadow-2xl rounded-lg overflow-hidden">
+          <img
+            class="w-full h-64 object-cover transform transition-transform hover:scale-105"
+            src="assets/img/cultivos.jpg"
+            alt="Cultivos Alternos"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-[#E79B16] pb-3">
+              Cultivos Alternos
+            </h3>
+            <hr />
+            <p class="text-gray-800 mt-4">
+              Además de la caña de azúcar, en Nocaima se cultivan
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #e79b16; font-size: 16px"
+                >frutales</span
+              >,
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #e79b16; font-size: 16px"
+                >plátano</span
+              >,
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #e79b16; font-size: 16px"
+                >café</span
+              >, y algunas
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #e79b16; font-size: 16px"
+                >legumbres</span
+              >
+              y
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #e79b16; font-size: 16px"
+                >hortalizas</span
+              >, aunque en menor cantidad. Estos cultivos son en su mayoría para
+              el
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #e79b16; font-size: 16px"
+                >auto-consumo</span
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Livestock and Agriculture -->
+        <div class="bg-white shadow-2xl rounded-lg overflow-hidden">
+          <img
+            class="w-full h-64 object-cover transform transition-transform hover:scale-105"
+            src="assets/img/ganaderia.jpg"
+            alt="Ganadería y Agricultura"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-[#1B6EAE] pb-3">
+              Ganadería y Agricultura
+            </h3>
+            <hr />
+            <p class="text-gray-800 mt-4">
+              La
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #1b6eae; font-size: 16px"
+                >avicultura</span
+              >,
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #1b6eae; font-size: 16px"
+                >piscicultura</span
+              >,
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #1b6eae; font-size: 16px"
+                >capricultura</span
+              >
+              y la cría de ganado
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #1b6eae; font-size: 16px"
+                >porcino</span
+              >
+              y
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #1b6eae; font-size: 16px"
+                >vacuno</span
+              >
+              están en continuo aumento, mejorando las
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #1b6eae; font-size: 16px"
+                >oportunidades nutricionales</span
+              >
+              para la población.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commerce and Small Industries -->
+        <div class="bg-white shadow-2xl rounded-lg overflow-hidden">
+          <img
+            class="w-full h-64 object-cover transform transition-transform hover:scale-105"
+            src="assets/img/comercio.webp"
+            alt="Comercio e Industrias"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-red-600 pb-3">
+              Comercio e Industrias
+            </h3>
+            <hr />
+            <p class="text-gray-800 mt-4">
+              El
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #dc2626; font-size: 16px"
+                >comercio</span
+              >
+              y las
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #dc2626; font-size: 16px"
+                >pequeñas industrias</span
+              >
+              también juegan un papel importante en la economía de Nocaima,
+              proporcionando
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #dc2626; font-size: 16px"
+                >empleo</span
+              >
+              y dinamizando la
+              <span
+                class="text-white font-bold rounded p-1"
+                style="background-color: #dc2626; font-size: 16px"
+                >economia local</span
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- seccion de cultura-->
+    <section
+      id="cultura"
+      class="cultura py-16 px-5 text-gray-800 "
+      style="
+        background-image: url('assets/img/wave_nocaima_cultura_desktop.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        @media (max-width: 768px) {
+          background-image: url('assets/img/wave_nocaima_cultura.svg');
+        }
+      "
+    >
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="assets/img/feria-campesina.webp"
+            alt="Festival Vallenato Panche de Acordeones"
+            class="rounded-lg shadow-lg border-8 border-[#004d00]"
+          />
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-4xl font-bold mb-4 text-[#FFE066]" style="
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            ">
+            Cultura Nocaimera
+          </h2>
+          <p class="mb-6 text-white" style="    text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7);">
+            La cultura de
+            <span class="bg-[white] text-[#367838] p-1 rounded font-bold text-sm" >Nocaima</span> está marcada
+            por su
+            <span class="bg-[#FFC107] p-1 rounded font-bold text-sm">riqueza histórica</span> y su
+            profundo arraigo en las tradiciones. Eventos emblemáticos como el
+            <span class="bg-[#FF5722] p-1 rounded font-bold text-sm"
+              >Festival Vallenato Panche de Acordeones</span
+            >, el
+            <span class="bg-[#FF9800] p-1 rounded font-bold text-sm"
+              >Reinado Departamental de la Panela</span
+            >, y el
+            <span class="bg-[#4CAF50] p-1 rounded font-bold text-sm">Día del Campesino</span>
+            destacan la vitalidad cultural de la región.
+          </p>
+          <a
+            href="festividades.html"
+            target="_blank"
+            class="read-more-btn bg-[#FF9800] text-white px-4 py-2 rounded hover:bg-[#F57C00] transition-all"
+          >
+            Quiero saber más sobre la cultura de Nocaima
+            <svg
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              class="icon text-white"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="relative text-white text-center p-5 bg-cover bg-center" style="background-image: url('assets/img/nocaima_galeria2.jpg');">
+      <div class="absolute inset-0 bg-black opacity-50 z-0"></div> <!-- Superposición oscura solo sobre la imagen de fondo -->
+      <h2 class="relative text-2xl font-bold mb-10 z-10">¿Dónde está             <b class="text-green-700">N</b><b class="text-green-500">o</b
+        ><b class="text-[#1B6EAE]">c</b><b class="text-red-600">a</b
+        ><b class="text-blue-400">i</b><b class="text-orange-400">m</b
+        ><b class="text-yellow-200">a</b>?</h2> <!-- Usar z-10 para asegurar que esté por encima de la superposición -->
+      <div class="relative flex justify-center items-center z-10">
+          <!-- Contenedor del Mapa -->
+          <div class="w-1/2 h-[50vh]">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7948.423050388803!2d-74.38545435972928!3d5.069435529629269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e408fb69e7d2941%3A0xaee8a9afd940b180!2sNocaima%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1723938329167!5m2!1ses-419!2sco" 
+                  class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+  
+          <!-- Contenedor del Texto -->
+          <div class="w-1/2 pl-6">
+              <p class="mt-4"><span class="p-1 rounded text-sm font-bold " style="background-color: #e79b16;">Nocaima</span> es un municipio ubicado en el departamento de Cundinamarca,           <b class="text-yellow-500">C</b>
+                <b class="text-yellow-500">o</b>
+                <b class="text-yellow-500">l</b>
+                <b class="text-blue-500">o</b>
+                <b class="text-blue-500">m</b>
+                <b class="text-red-500">b</b>
+                <b class="text-red-500">i</b>
+                <b class="text-red-500">a</b>, a aproximadamente 75 km al noroeste de Bogotá. Es conocido por su rica historia y sus hermosos paisajes montañosos.</p>
+              <p class="mt-5">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Nocaima,Cundinamarca,Colombia" target="_blank" class="como-llegar text-[12px] md:text-base">Obtener indicaciones para llegar a Nocaima</a>
+              </p>
+          </div>
+      </div>
+  </div>
+  
+  <footer class="text-white py-10 bg-[#009473]" id="footer">
+    <div class="container mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Logotipo y Branding -->
+        <div class="flex flex-col items-center">
+            <img src="assets/img/logo_footer.png" alt="Logo Nocaima" class="mr-3">
+            <p class="text-sm">El corazón de <span class="font-bold text-white bg-orange-400 p-1 rounded">Cundinamarca</span></p>
+            <h2 class="text-white font-bold text-lg text-center mt-3">
+              <b class="text-yellow-300 bg-[#00122F] p-1 rounded font-bold">Paraiso</b>
+              <b class="text-blue-400  bg-[#00122F] p-1 rounded font-bold">Dulce</b><br>
+                   Y <br><span class="text-red-500 bg-[#00122F] p-1 rounded font-bold">ecologico</span>
+            </h2>
+       
+        </div>
+
+        <!-- Mapa del Sitio -->
+        <div class="hidden md:block">
+            <h3 class="text-xl font-semibold mb-4 text-white">Mapa del Sitio</h3>
+            <ul>
+                <li><a href="#cultura" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Cultura</a></li>
+                <li><a href="#turismo" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Turismo</a></li>
+                <li><a href="#economia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Economía</a></li>
+                <li><a href="#historia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Historia</a></li>
+                <li><a href="#gastronomia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Gastronomía</a></li>
+                <li><a href="festividades.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Eventos y Festividades</a></li>
+            </ul>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="hidden md:block">
+            <h3 class="text-xl font-semibold mb-4 text-white">Contacto</h3>
+            <p class="text-gray-300"><strong>Dirección:</strong> Calle Principal, Nocaima, Cundinamarca</p>
+            <p class="text-gray-300"><strong>Correo:</strong> <a href="mailto:info@nocaima.com" class="hover:text-yellow-400 transition-colors duration-300">info@nocaima.com</a></p>
+            <p class="text-gray-300"><strong>Teléfono:</strong> +57 123 456 7890</p>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div>
+            <h3 class="text-xl font-semibold mb-4 text-white">Síguenos</h3>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/AlcaldiaDeNocaima" target="_blank" class="iconos text-gray-300 hover:text-blue-500 transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/alcaldianocaima" target="_blank" class="iconos text-gray-300 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/alcaldiadenocaima/" target="_blank" class="iconos text-gray-300 hover:text-pink-500 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Créditos, Avisos Legales, y Derechos de Autor -->
+    <div class="mt-10 text-center border-t border-gray-700 pt-5">
+
+        <p class="text-white text-sm mt-2">
+        </p>
+        <p class="text-white text-sm mt-2">&copy; 2024 Nocaima.</p>
+        <p class="text-white text-sm">Desarrollado por <span class="font-bold transition-colors duration-300"><a href="https://github.com/JohanBoDev" target="_blank">Johan Bohorquez</a></span>.</p>
+    </div>
+</footer>
+
+  
+    <script src="app.js"></script>
+  </body>
+</html>
