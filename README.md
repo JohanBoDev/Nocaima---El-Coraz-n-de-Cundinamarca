@@ -4,6 +4,8 @@
 
 Este proyecto web presenta al municipio de Nocaima, ubicado en el departamento de Cundinamarca, Colombia. El sitio está diseñado para ofrecer información detallada sobre la cultura, turismo, economía, historia, gastronomía, eventos y festividades de Nocaima, destacando su importancia cultural y turística dentro de la región.
 
+![Vista previa del sitio web](https://github.com/JohanBoDev/Nocaima---El-Coraz-n-de-Cundinamarca/blob/main/assets/img/nocaima_galeria2.jpg?raw=true)
+
 ## Características Principales
 
 - **Cultura:** Explora las tradiciones, costumbres y eventos culturales que definen a Nocaima.
