@@ -1408,7 +1408,48 @@
         </div>
       </div>
     </div>
+    <section class="clima py-16 px-5 bg-[#2d3748] text-white">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <!-- Contenedor del clima -->
+        <div class="md:w-1/2 p-6 bg-white text-white rounded-lg shadow-lg relative" 
+  style="
+    background-image: url('./assets/img/nocaima_lineaTiempo.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.096);
+  ">
+  <!-- Fondo semitransparente -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
+  
+  <!-- Contenido del texto -->
+  <div class="relative z-10">
+    <h2 class="text-2xl font-bold mb-4">Clima en Nocaima</h2>
+    <div id="clima-info">
+      <p class="text-white">Cargando datos del clima...</p>
+    </div>
+  </div>
+</div>
 
+    
+        <!-- Contenedor de información adicional -->
+        <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+          <h2 class="text-3xl font-bold mb-4 text-yellow-300">Sobre el Clima</h2>
+          <p class="mb-6">
+            Nocaima se caracteriza por un clima templado durante la mayor parte del
+            año. Sus temperaturas oscilan entre los 20°C y 28°C, lo que lo convierte
+            en un destino agradable para visitantes que buscan tranquilidad y
+            naturaleza.
+          </p>
+          <p>
+            Con días mayormente soleados y lluvias ocasionales, es ideal para
+            actividades al aire libre como caminatas y visitas a sus balnearios.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    
     <footer class="text-white py-10 bg-[#009473]" id="footer">
       <div
         class="container mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8"
@@ -1562,5 +1603,7 @@
     </footer>
 
     <script src="app.js" defer></script>
+    <script src="clima.js" ></script>
+
   </body>
 </html>
