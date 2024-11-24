@@ -1,0 +1,17 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar archivos CSS y JS generados automáticamente
+src/*.min.css
+src/*.min.js
+src/output.css
+
+# Ignorar archivos temporales o de sistema
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignorar dependencias instaladas globalmente
+package-lock.json
+yarn.lock
