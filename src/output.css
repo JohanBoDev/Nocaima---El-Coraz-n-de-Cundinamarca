@@ -43,8 +43,7 @@ html,
   /* 2 */
   -moz-tab-size: 4;
   /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
@@ -88,8 +87,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -378,7 +376,8 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -621,7 +620,9 @@ video {
 }
 
 .col-span-1 {
-  grid-column: span 1 / span 1;
+  -ms-grid-column-span: 1;
+  -ms-grid-column: span 1;
+      grid-column: span 1 / span 1;
 }
 
 .mx-auto {
@@ -702,10 +703,12 @@ video {
 }
 
 .flex {
+  display: -ms-flexbox;
   display: flex;
 }
 
 .grid {
+  display: -ms-grid;
   display: grid;
 }
 
@@ -766,27 +769,33 @@ video {
 }
 
 .grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  -ms-grid-columns: (minmax(0, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .items-center {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .justify-center {
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .justify-between {
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .justify-items-center {
-  justify-items: center;
+  -ms-grid-column-align: center;
+      justify-items: center;
 }
 
 .gap-12 {
@@ -798,8 +807,7 @@ video {
 }
 
 .gap-x-14 {
-  -moz-column-gap: 3.5rem;
-       column-gap: 3.5rem;
+  column-gap: 3.5rem;
 }
 
 .gap-y-4 {
@@ -896,9 +904,14 @@ video {
   background-color: rgb(255 193 7 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#fb923c\] {
+.bg-\[\#c75d00\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+  background-color: rgb(199 93 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ff7700\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 119 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[white\] {
@@ -926,16 +939,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
 }
@@ -949,8 +952,7 @@ video {
 }
 
 .object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .p-1 {
@@ -1218,7 +1220,9 @@ video {
 }
 
 .transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1314,7 +1318,9 @@ video {
 
 @media (min-width: 768px) {
   .md\:col-span-2 {
-    grid-column: span 2 / span 2;
+    -ms-grid-column-span: 2;
+    -ms-grid-column: span 2;
+        grid-column: span 2 / span 2;
   }
 
   .md\:mb-0 {
@@ -1326,6 +1332,7 @@ video {
   }
 
   .md\:flex {
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -1342,15 +1349,18 @@ video {
   }
 
   .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    -ms-grid-columns: (minmax(0, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
 
   .md\:pl-12 {
@@ -1384,19 +1394,19 @@ video {
   }
 
   .lg\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .lg\:hidden {
-    display: none;
+    -ms-grid-column-span: 3;
+    -ms-grid-column: span 3;
+        grid-column: span 3 / span 3;
   }
 
   .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    -ms-grid-columns: (minmax(0, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:text-2xl {
@@ -1425,6 +1435,7 @@ video {
   }
 
   .xl\:flex {
+    display: -ms-flexbox;
     display: flex;
   }
 
