@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="./src/styles.css" />
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="preload" href="./assets/img/hero_nocaima.webp" as="image" />
+    <link rel="preload" href="assets/img/logo_noca.webp" as="image">
+
     <link
        rel="preload"
       as="style"
@@ -48,11 +50,8 @@
       class="flex justify-between items-center py-3 shadow-lg bg-black bg-opacity-70"
     >
       <div class="flex items-center ml-5 logo-container">
-        <img
-          src="assets/img/logo_noca.webp"
-          alt="Nocaima Logo"
-          class="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
-        />
+        <img src="assets/img/logo_noca.webp" alt="Nocaima Logo" width="80" height="80" class="h-[50px] w-[50px] md:h-[80px] md:w-[80px]" />
+
         <div class="hidden md:flex flex-col justify-center ml-3">
           <h2 class="text-white font-bold text-xl">
             <span>
@@ -82,6 +81,7 @@
               <img
                 src="assets/img/historia.webp"
                 alt="Logotipo de historia"
+                loading="lazy"
                 class="inline-block mr-2"
               />Historia
             </a>
@@ -95,6 +95,7 @@
               <img
                 src="assets/img/turismo.webp"
                 alt="Logotipo de turismo"
+                loading="lazy"
                 class="inline-block mr-2"
               />Turismo
             </a>
@@ -108,6 +109,7 @@
               <img
                 src="assets/img/economia.webp"
                 alt="Logotipo de economia"
+                loading="lazy"
                 class="inline-block mr-2"
               />Economía
             </a>
@@ -121,6 +123,7 @@
               <img
                 src="assets/img/cultura.webp"
                 alt="Logotipo de cultura"
+                loading="lazy"
                 class="inline-block mr-2"
               />Cultura
             </a>
@@ -134,6 +137,7 @@
               <img
                 src="assets/img/contacto.webp"
                 alt="Logotipo de contacto"
+                loading="lazy"
                 class="inline-block mr-2"
               />Contacto
             </a>
@@ -310,6 +314,7 @@
           alt="Vista previa del video"
           style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;"
           onclick="loadYouTubeIframe(this)"
+          loading="lazy"
         />
       </div>
       
@@ -436,6 +441,7 @@
           <img
             src="assets/img/iglesia_nocaima.webp"
             alt="Historia de Nocaima"
+            loading="lazy"
             class="rounded-lg shadow-lg border-8 border-green-700"
           />
         </div>
@@ -607,6 +613,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/pioneros.webp"
           alt="Pioneross Nocaima"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -659,6 +666,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/nocaima_galeria2.webp"
           alt="Iglesia Nocaima"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -710,6 +718,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/rayito-sol.webp"
           alt="Rayito de Sol"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -760,6 +769,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/casa-cultura.webp"
           alt="Casa de la cultura"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -811,6 +821,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/rancho-pacho.webp"
           alt="Rancho Pacho"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -863,6 +874,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/criadero-trinidad.webp"
           alt="Criadero Equino La Trinidad"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -911,6 +923,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/san-cayetano.webp"
           alt="Balneario de San Cayetano"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -963,6 +976,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/casa-encanto.webp"
           alt="Casa Encanto Colombia"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -1013,6 +1027,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/villa-celeny.webp"
           alt="Villa Celeny"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -1063,6 +1078,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/quinta-real.webp"
           alt="Hotel Quinta Real"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -1113,6 +1129,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/sacharum.webp"
           alt="Saccharum Villas de Lujo"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -1165,6 +1182,7 @@
           class="w-full h-48 object-cover"
           src="assets/img/laderas.webp"
           alt="Laderas de San Felipe"
+          loading="lazy"
         />
 
         <!-- Contenido de la Card -->
@@ -1251,6 +1269,7 @@
             class="w-full h-64 object-cover transform transition-transform hover:scale-105"
             src="assets/img/caña.webp"
             alt="Caña de Azúcar"
+            loading="lazy"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold text-green-700 pb-3">
@@ -1306,6 +1325,7 @@
             class="w-full h-64 object-cover transform transition-transform hover:scale-105"
             src="assets/img/cultivos.webp"
             alt="Cultivos Alternos"
+            loading="lazy"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold text-[#E79B16] pb-3">
@@ -1356,6 +1376,7 @@
             class="w-full h-64 object-cover transform transition-transform hover:scale-105"
             src="assets/img/ganaderia.webp"
             alt="Ganadería y Agricultura"
+            loading="lazy"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold text-[#1B6EAE] pb-3">
@@ -1408,6 +1429,7 @@
             class="w-full h-64 object-cover transform transition-transform hover:scale-105"
             src="assets/img/comercio.webp"
             alt="Comercio e Industrias"
+            loading="lazy"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold text-red-600 pb-3">
@@ -1477,6 +1499,7 @@
         <img
           src="assets/img/feria-campesina.webp"
           alt="Festival Vallenato Panche de Acordeones"
+          loading="lazy"
           class="rounded-lg shadow-lg border-8 border-[#004d00]"
         />
       </div>
@@ -1683,6 +1706,7 @@
           <img
             src="assets/img/logo_footer.webp"
             alt="Logo Nocaima"
+            loading="lazy"
             class="mr-3"
           />
           <p class="text-sm">
