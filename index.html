@@ -40,6 +40,17 @@
       href="./assets/img/logo_noca.webp"
       type="image/x-icon"
     />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    /></noscript>
     <link rel="stylesheet" href="./src/styles.css" />
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="preload" href="./assets/img/hero_nocaima.webp" as="image" />
@@ -269,6 +280,171 @@
         <span class="blob"></span>
       </a>
     </section>
+    <style>
+      /* Ocultar la sección en pantallas menores a 1024px */
+      @media (max-width: 1023px) {
+        .hidden-lg {
+          display: none;
+        }
+      }
+    
+      /* Mostrar la sección en pantallas mayores o iguales a 1024px */
+      @media (min-width: 1024px) {
+        .hidden-lg {
+          display: block;
+        }
+      }
+    </style>
+    <section
+      class="hidden-lg"
+      style="
+        background-image: url('./assets/img/banner_nocaima.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh; /* Ocupa todo el alto de la pantalla */
+        width: 100vw; /* Ocupa todo el ancho de la pantalla */
+        position: relative;
+      "
+    >
+      <!-- Capa semitransparente para opacidad -->
+      <div
+        style="
+          position: absolute;
+          inset: 0;
+          background-color: rgba(0, 0, 0, 0.141); /* Negro con opacidad */
+        "
+      ></div>
+    
+      <!-- Contenido opcional centrado -->
+      <div
+        style="
+          position: relative;
+          z-index: 1; /* Para que esté sobre la capa de opacidad */
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          height: 100%;
+          right: 50px;
+        "
+      >
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/I2HS_jYpMiU?si=qhz7kwNcsM-jbkr3"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <style>
+      /* Estilo base para la sección */
+      .responsive-background {
+        height: 100vh; /* Ocupa todo el alto de la pantalla */
+        width: 100vw; /* Ocupa todo el ancho de la pantalla */
+        position: relative;
+        overflow: hidden; /* Evita desplazamientos innecesarios */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    
+      /* Imagen estática para pantallas menores a 768px */
+      @media (max-width: 768px) {
+        .responsive-background {
+          background-image: url('./assets/img/nocaimaPresentacionCelular.png');
+        }
+    
+        /* Ocultar el video en pantallas pequeñas */
+        .video-background {
+          display: none;
+        }
+      }
+    </style>
+  
+    <section class="responsive-background">
+      <!-- Video solo para pantallas mayores a 768px -->
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="video-background"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 0;
+        "
+      >
+        <source src="./assets/img/nocaimaPresentacion.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    
+      <!-- Capa semitransparente para opacidad -->
+      <div
+        style="
+          position: absolute;
+          inset: 0;
+          background-color: rgba(0, 0, 0, 0.3); /* Negro con opacidad */
+          z-index: 1;
+        "
+      ></div>
+    
+      <!-- Texto curvado centrado -->
+      <div
+        style="
+          position: relative;
+          z-index: 2; /* Asegura que el contenido esté sobre la capa semitransparente */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        "
+      >
+      <svg
+      width="500"
+      height="250"
+      viewBox="0 0 500 150"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Definir el filtro para la sombra -->
+      <defs>
+        <filter id="text-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="black" />
+        </filter>
+      </defs>
+    
+      <!-- Definir el camino curvado -->
+      <path
+        id="curve"
+        d="M50,100 Q250,-50 450,100"
+        fill="transparent"
+      />
+      
+      <!-- Texto con sombra -->
+      <text
+        font-size="70"
+        font-family="Arial"
+        fill="white"
+        text-anchor="middle"
+        style="filter: url(#text-shadow);"
+      >
+        <textPath href="#curve" startOffset="50%">
+          ¡Bienvenido!
+        </textPath>
+      </text>
+    </svg>
+    
+      </div>
+    </section>
+    
     <!-- seccion historia-->
     <section
       id="historia"
@@ -533,8 +709,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -581,8 +759,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -630,8 +810,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -680,8 +862,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -778,8 +962,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -826,8 +1012,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -874,8 +1062,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -922,8 +1112,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -971,8 +1163,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -1019,8 +1213,10 @@
               />
             </svg>
             <span class="inline-block">
-              <span class="bg-[#c75d00] font-bold p-1 rounded text-white">Nocaima</span>
-,
+              <span class="bg-[#c75d00] font-bold p-1 rounded text-white"
+                >Nocaima</span
+              >
+              ,
               <span class="bg-[#2d3748] font-bold p-1 rounded text-white"
                 >Cundinamarca</span
               ></span
@@ -1276,82 +1472,94 @@
 
     <!-- seccion de cultura-->
     <section
-      id="cultura"
-      class="cultura py-16 px-5 text-gray-800"
-      style="
-        background-image: url('assets/img/wave_nocaima_cultura_desktop.svg');
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: cover;
-        @media (max-width: 768px) {
-          background-image: url('assets/img/wave_nocaima_cultura.svg');
-        }
-      "
-    >
-      <div class="container mx-auto flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <img
-            src="assets/img/feria-campesina.webp"
-            alt="Festival Vallenato Panche de Acordeones"
-            class="rounded-lg shadow-lg border-8 border-[#004d00]"
-          />
-        </div>
-        <div class="md:w-1/2 md:pl-12">
-          <h2
-            class="text-4xl font-bold mb-4 text-[#FFE066]"
-            style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)"
-          >
-            Cultura Nocaimera
-          </h2>
-          <p
-            class="mb-6 text-white"
-            style="text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7)"
-          >
-            La cultura de
-            <span
-              class="bg-[white] text-[#367838] p-1 rounded font-bold text-sm"
-              >Nocaima</span
-            >
-            está marcada por su
-            <span class="bg-[#FFC107] p-1 rounded font-bold text-sm"
-              >riqueza histórica</span
-            >
-            y su profundo arraigo en las tradiciones. Eventos emblemáticos como
-            el
-            <span class="bg-[#FF5722] p-1 rounded font-bold text-sm"
-              >Festival Vallenato Panche de Acordeones</span
-            >, el
-            <span class="bg-[#FF9800] p-1 rounded font-bold text-sm"
-              >Reinado Departamental de la Panela</span
-            >, y el
-            <span class="bg-[#4CAF50] p-1 rounded font-bold text-sm"
-              >Día del Campesino</span
-            >
-            destacan la vitalidad cultural de la región.
-          </p>
-          <a
-            href="festividades.html"
-            target="_blank"
-            class="read-more-btn bg-[#FF9800] text-white px-4 py-2 rounded hover:bg-[#F57C00] transition-all"
-          >
-            Quiero saber más sobre la cultura de Nocaima
-            <svg
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              class="icon text-white"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                fill-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
+    id="cultura"
+    class="cultura py-16 px-5 text-gray-800"
+    style="
+      background-image: url('assets/img/wave_nocaima_cultura_desktop.svg');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+      position: relative; /* Necesario para manejar capas */
+    "
+  >
+    <!-- Capa oscura semitransparente -->
     <div
-      class="relative text-white text-center p-5 bg-cover bg-center"
+      style="
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* Fondo negro con opacidad */
+        z-index: 0; /* Envía la capa al fondo */
+      "
+    ></div>
+  
+    <!-- Contenido -->
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center"
+      style="position: relative; z-index: 1;" 
+    >
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img
+          src="assets/img/feria-campesina.webp"
+          alt="Festival Vallenato Panche de Acordeones"
+          class="rounded-lg shadow-lg border-8 border-[#004d00]"
+        />
+      </div>
+      <div class="md:w-1/2 md:pl-12">
+        <h2
+          class="text-4xl font-bold mb-4 text-[#FFE066]"
+          style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)"
+        >
+          Cultura Nocaimera
+        </h2>
+        <p
+          class="mb-6 text-white"
+          style="text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.7)"
+        >
+          La cultura de
+          <span
+            class="bg-[white] text-[#367838] p-1 rounded font-bold text-sm"
+            >Nocaima</span
+          >
+          está marcada por su
+          <span class="bg-[#FFC107] p-1 rounded font-bold text-sm"
+            >riqueza histórica</span
+          >
+          y su profundo arraigo en las tradiciones. Eventos emblemáticos como el
+          <span class="bg-[#FF5722] p-1 rounded font-bold text-sm"
+            >Festival Vallenato Panche de Acordeones</span
+          >, el
+          <span class="bg-[#FF9800] p-1 rounded font-bold text-sm"
+            >Reinado Departamental de la Panela</span
+          >, y el
+          <span class="bg-[#4CAF50] p-1 rounded font-bold text-sm"
+            >Día del Campesino</span
+          >
+          destacan la vitalidad cultural de la región.
+        </p>
+        <a
+          href="festividades.html"
+          target="_blank"
+          class="read-more-btn bg-[#FF9800] text-white px-4 py-2 rounded hover:bg-[#F57C00] transition-all"
+        >
+          Quiero saber más sobre la cultura de Nocaima
+          <svg
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            class="icon text-white"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- seccion de donde esta nocaima-->
+    <div
+      class="relative text-white text-center p-5 pt-10 pb-10 bg-cover bg-center"
       style="background-image: url('assets/img/nocaima_galeria2.webp')"
     >
       <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
@@ -1408,48 +1616,88 @@
         </div>
       </div>
     </div>
-    <section class="clima py-16 px-5 bg-[#2d3748] text-white">
-      <div class="container mx-auto flex flex-col md:flex-row items-center">
-        <!-- Contenedor del clima -->
-        <div class="md:w-1/2 p-6 bg-white text-white rounded-lg shadow-lg relative" 
-  style="
-    background-image: url('./assets/img/nocaima_lineaTiempo.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.096);
-  ">
-  <!-- Fondo semitransparente -->
-  <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
-  
-  <!-- Contenido del texto -->
-  <div class="relative z-10">
-    <h2 class="text-2xl font-bold mb-4">Clima en Nocaima</h2>
-    <div id="clima-info">
-      <p class="text-white">Cargando datos del clima...</p>
-    </div>
-  </div>
-</div>
+    <!-- seccion de clima-->
+    <section
+      class="clima py-16 px-5 text-white bg-green-800"
+      style="
+        background-color: #6a5607b5;
+        position: relative; /* Necesario para colocar la cortina negra */
+      "
+    >
+      <!-- Cortina negra semitransparente -->
+      <div
+        style="
+          position: absolute;
+          inset: 0; /* Ocupa todo el espacio del section */
+          background-color: rgba(
+            0,
+            0,
+            0,
+            0.5
+          ); /* Cortina negra con opacidad del 50% */
+          z-index: 1; /* Asegura que la cortina esté detrás del contenido */
+        "
+      ></div>
 
-    
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center relative"
+        style="z-index: 2"
+      >
+        <!-- Contenedor del clima -->
+        <div
+          class="md:w-1/2 p-6 bg-white text-white rounded-lg shadow-lg relative"
+          style="
+            background-image: url('./assets/img/nocaima_galeria.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.096);
+          "
+        >
+          <!-- Fondo semitransparente -->
+          <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
+
+          <!-- Contenido del texto -->
+          <div class="relative z-10">
+            <h2 class="text-2xl font-bold mb-4">
+              Clima en
+              <span>
+                <b style="color: #006400">N</b>
+                <b style="color: #008000">o</b>
+                <b style="color: #1b6eae">c</b>
+                <b style="color: #ff0000">a</b>
+                <b style="color: #00bfff">i</b>
+                <b style="color: #ffa500">m</b>
+                <b style="color: #ffff00">a</b>
+              </span>
+            </h2>
+            <div id="clima-info">
+              <p class="text-white">Cargando datos del clima...</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Contenedor de información adicional -->
         <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-          <h2 class="text-3xl font-bold mb-4 text-yellow-300">Sobre el Clima</h2>
+          <h2 class="text-3xl font-bold mb-4 text-white">
+            Sobre el
+            <span class="bg-orange-400 p-3 rounded text-white"> Clima </span>
+          </h2>
           <p class="mb-6">
-            Nocaima se caracteriza por un clima templado durante la mayor parte del
-            año. Sus temperaturas oscilan entre los 20°C y 28°C, lo que lo convierte
-            en un destino agradable para visitantes que buscan tranquilidad y
-            naturaleza.
+            <b>Nocaima</b> se caracteriza por un clima templado durante la mayor
+            parte del año. Sus temperaturas oscilan entre los <b>20°C</b> y
+            <b>28°C</b>, lo que lo convierte en un destino agradable para
+            visitantes que buscan tranquilidad y naturaleza.
           </p>
           <p>
             Con días mayormente soleados y lluvias ocasionales, es ideal para
-            actividades al aire libre como caminatas y visitas a sus balnearios.
+            actividades al aire libre como <b>caminatas</b> y visitas a sus
+            <b>balnearios</b>.
           </p>
         </div>
       </div>
     </section>
-    
-    
+
     <footer class="text-white py-10 bg-[#009473]" id="footer">
       <div
         class="container mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8"
@@ -1603,7 +1851,6 @@
     </footer>
 
     <script src="app.js" defer></script>
-    <script src="clima.js" ></script>
-
+    <script src="clima.js"></script>
   </body>
 </html>
