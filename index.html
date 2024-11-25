@@ -4,29 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="description"
-      content="Descubre Nocaima, el Paraíso Dulce de Cundinamarca. Conoce su historia, cultura, turismo, y economía, en un destino lleno de tradiciones y paisajes únicos."
-    />
-    <meta
-      name="description"
-      content="Explora la rica historia de Nocaima, uno de los municipios más antiguos de Cundinamarca, donde la tradición y la cultura se mantienen vivas."
-    />
-    <meta
-      name="description"
-      content="Sumérgete en las maravillas naturales y culturales de Nocaima. Un destino perfecto para la aventura, la tranquilidad y la tradición."
-    />
-    <meta
-      name="description"
-      content="Descubre las principales actividades económicas de Nocaima, incluyendo el cultivo de caña de azúcar, ganadería y el comercio local."
-    />
-    <meta
-      name="description"
-      content="Conoce la vibrante cultura de Nocaima, desde festivales tradicionales como el Reinado Departamental de la Panela hasta eventos culturales únicos."
-    />
-    <meta
-      name="description"
-      content="Ubica a Nocaima, un municipio de Cundinamarca lleno de historia, cultura y naturaleza. Encuentra direcciones fácilmente con nuestro mapa interactivo."
-    />
+    name="description"
+    content="Descubre Nocaima, el Paraíso Dulce de Cundinamarca. Conoce su historia, cultura, turismo, festividades y economía, en un destino lleno de tradiciones, paisajes únicos y vibrante cultura."
+  />
     <meta
       name="keywords"
       content="Nocaima, Turismo en Nocaima, Historia de Nocaima, Cultura de Nocaima, Economía de Nocaima, Nocaima Cundinamarca, Destinos turísticos en Colombia, Reinado Departamental de la Panela, Municipios de Cundinamarca, Tradiciones de Nocaima, Turismo ecológico en Nocaima, Producción de panela en Colombia, Festivales en Nocaima, Caminatas ecológicas Cundinamarca, Eventos culturales en Nocaima, Agricultura en Cundinamarca, Cómo llegar a Nocaima, Sitios turísticos en Nocaima"
@@ -40,22 +20,13 @@
       href="./assets/img/logo_noca.webp"
       type="image/x-icon"
     />
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./src/styles.css" />
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="preload" href="./assets/img/hero_nocaima.webp" as="image" />
     <link
-      rel="stylesheet"
+       rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
     />
     <title>Nocaima Paraiso Dulce</title>
@@ -244,20 +215,24 @@
     <section
       class="fondo_hero flex flex-col justify-center items-center text-center"
     >
-      <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white"
-      >
-        Bienvenido a
-        <span class="nocaima-colored">
-          <b class="text-green-700">N</b>
-          <b class="text-green-500">o</b>
-          <b class="text-[#1B6EAE]">c</b>
-          <b class="text-red-600">a</b>
-          <b class="text-blue-400">i</b>
-          <b class="text-orange-400">m</b>
-          <b class="text-yellow-400">a</b>
-        </span>
-      </h1>
+    <h1
+    class="text-4xl lg:text-6xl font-bold text-white shadow-md"
+    style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)"
+    aria-label="Bienvenido a Nocaima"
+  >
+    Bienvenido a
+    <span class="nocaima-colored">
+      <b class="text-green-700">N</b>
+      <b class="text-green-500">o</b>
+      <b class="text-[#1B6EAE]">c</b>
+      <b class="text-red-600">a</b>
+      <b class="text-blue-400">i</b>
+      <b class="text-orange-400">m</b>
+      <b class="text-yellow-400">a</b>
+    </span>
+  </h1>
+  
+  
       <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8">
         El Paraíso Dulce de
         <span class="colombia-colored">
@@ -1851,6 +1826,6 @@
     </footer>
 
     <script src="app.js" defer></script>
-    <script src="clima.js"></script>
+    <script src="clima.js" defer></script>
   </body>
 </html>
