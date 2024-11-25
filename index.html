@@ -303,16 +303,16 @@
           right: 50px;
         "
       >
-      <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/I2HS_jYpMiU?si=qhz7kwNcsM-jbkr3"
-      title="YouTube video player"
-      frameborder="0"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
+      <div class="youtube-placeholder" style="position: relative; width: 560px; height: 315px;">
+        <!-- Imagen de vista previa -->
+        <img
+          src="https://img.youtube.com/vi/I2HS_jYpMiU/hqdefault.jpg"
+          alt="Vista previa del video"
+          style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;"
+          onclick="loadYouTubeIframe(this)"
+        />
+      </div>
+      
     
       </div>
     </section>
@@ -1828,5 +1828,19 @@
 
     <script src="app.js" defer></script>
     <script src="clima.js" defer></script>
+    <script>
+      function loadYouTubeIframe(el) {
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('width', '560');
+        iframe.setAttribute('height', '315');
+        iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/I2HS_jYpMiU?autoplay=1');
+        iframe.setAttribute('title', 'YouTube video player');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', 'true');
+        el.parentNode.replaceChild(iframe, el);
+      }
+    </script>
+    
   </body>
 </html>
